@@ -6,10 +6,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 '''
-This program aims to determine the temperature distribution as a function of position (x) 
-and time (t) in a flat plate. Initially at a uniform temperature (T_i), the plate is
-immersed in a fluid with temperature (T_infty). To achieve this, Physics-Informed 
-Neural Networks (PINNs) were used.
+This program uses Physics-Informed Neural Networks (PINNs) to determine the temperature distribution
+as a function of position (x) and time (t) in a flat plate. Initially, the plate has a uniform temperature 
+(T_i) and is immersed in a fluid at a temperature (T_infty).
 '''
 
 torch.manual_seed(42)
@@ -21,7 +20,7 @@ alpha = 18.8 * 1e-6     # Thermal Diffusivity
 h = 500.                # Convective Heat Transfer Coefficient
 k = 63.9                # Thermal Conductivity
 T_infty = 333.15        # Fluid Temperature
-Ti = 253.15             # Initial Temperature of the Plate Temperatura
+Ti = 253.15             # Initial Temperature of the Plate
 L = 40 * 1e-3           # bar Length
 t_end = 480             # End Time
 
